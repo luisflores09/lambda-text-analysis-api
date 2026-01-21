@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-comprehend": "^3.972.0"
+  }
+}
