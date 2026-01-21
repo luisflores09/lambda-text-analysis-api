@@ -8,7 +8,7 @@ Given an input string, it returns:
 - **Key phrases** detected in the text
 - **Entities** detected in the text (people, locations, organizations, etc.)
 
-Implementation lives in [lambda-text-analysis-api/index.js](lambda-text-analysis-api/index.js).
+Implementation lives in [index.js](index.js).
 
 #### How it works
 
@@ -50,7 +50,7 @@ The Lambda’s execution role must allow Comprehend actions:
 
 - `@aws-sdk/client-comprehend` (v3 AWS SDK)
 
-See [lambda-text-analysis-api/package.json](lambda-text-analysis-api/package.json).
+See [package.json](package.json).
 
 #### Example request (API Gateway)
 
@@ -61,10 +61,3 @@ curl -sS -X POST "$API_URL" \
   -H 'Content-Type: application/json' \
   -d '{"text":"Amazon Comprehend can extract entities and sentiment."}'
 ```
-
-#### Local notes
-
-There are no npm scripts in this repo currently; `lambda-text-analysis-api` is intended to be deployed and executed in AWS Lambda.
-
-If you want, I can also add:
-- a minimal `package.json` script and a small local harness (e.g., `node local-run.js`) to invoke `handler()` with a sample event.
